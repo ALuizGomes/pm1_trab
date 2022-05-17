@@ -23,18 +23,20 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     padding: 10,
+    alignItems: 'center',
   },
   buttonCard: {
     width: '100%',
-    padding: 6,
-    backgroundColor: '#969CB2',
+    // padding: 6,
+    backgroundColor: '#F7FAA0',
     borderRadius: 10
   },
   textCard: {
-    color: '#ffffff',
-    fontSize: 26,
+    textAlign: 'center',
+    color: '#000',
+    fontSize: 20,
     fontWeight: 'bold',
-    flexDirection: 'row',
+    // flexDirection: 'row',
   }
 })
 

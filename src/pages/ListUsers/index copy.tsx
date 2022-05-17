@@ -9,7 +9,9 @@ interface ListUsersProps {
   id: string;
   name: string;
   cpf: string;
-  email: string;
+  banco_agencia: string;
+  conta: string;
+  salario: string;
 }
 
 export function ListUsers() {
@@ -31,9 +33,11 @@ export function ListUsers() {
       <Header title='Listam de Usuários' />
       <FlatList data={users} keyExtractor={item => item.id} renderItem={({ item }) => (
           <TouchableOpacity>
-            <Text>{item.name}</Text>
-            <Text>{item.cpf}</Text>
-            <Text>{item.email}</Text>
+            <Text>Nome: {item.name}</Text>
+            <Text>CPF: {item.cpf}</Text>
+            <Text>Banco/Agencia: {item.banco_agencia}</Text>
+            <Text>Conta: {item.conta}</Text>
+            <Text>Salaraio: {item.salario}</Text>
           </TouchableOpacity>
         )} />
     </View>

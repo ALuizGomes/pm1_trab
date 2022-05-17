@@ -10,16 +10,18 @@ import { Input } from '../../components/Input'
 export function Dashboard() {
   const [name, setName] = useState('')
   const [cpf, setCpf] = useState('')
-  const [email, setEmail] = useState('')
-  const [cidade, setCidade] = useState('')
+  const [banco_agencia, setBancoAgencia] = useState('')
+  const [conta, setConta] = useState('')
+  const [salario, setSalario] = useState('')
 
   async function handleAddUser() {
     const user = {
       id: new Date().getTime(),
       name,
       cpf,
-      email,
-      cidade
+      banco_agencia,
+      conta,
+      salario
     }
     try {
       const data = await AsyncStorage.getItem('@si:users')
@@ -32,8 +34,9 @@ export function Dashboard() {
     }
     setName('')
     setCpf('')
-    setEmail('')
-    setCidade('')
+    setBancoAgencia('')
+    setConta('')
+    setSalario('')
   }
 
   async function loadDataUser() {
@@ -55,9 +58,11 @@ export function Dashboard() {
 
           <Input placeholder='CPF' value={cpf} onChangeText={value => setCpf(value)} />
 
-          <Input placeholder='e-mail' value={email} onChangeText={value => setEmail(value)} />
+          <Input placeholder='Banco/Angencia' value={banco_agencia} onChangeText={value => setBancoAgencia(value)} />
 
-          <Input placeholder='Cidade' value={cidade} onChangeText={value => setCidade(value)} />
+          <Input placeholder='Conta' value={conta} onChangeText={value => setConta(value)} />
+
+          <Input placeholder='Salario' value={salario} onChangeText={value => setSalario(value)} />
 
           <Button title='Incluir' onPress={handleAddUser} />
       </ScrollView>

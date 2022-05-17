@@ -51,8 +51,6 @@ export function SearchUsers() {
       setFilteredUsers([])
       return
     }
-    if(){}
-    setFilteredUsers(data_name)
   }
   
   useEffect(() => {

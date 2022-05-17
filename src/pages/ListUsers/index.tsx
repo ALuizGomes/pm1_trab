@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useState, useEffect, useCallback } from 'react'
-import { View, StyleSheet, FlatList, Alert } from 'react-native'
+import { View, StyleSheet, FlatList, Alert, Text } from 'react-native'
 
 import { useFocusEffect } from '@react-navigation/native'
 import { Header } from "../../components/Header";
@@ -11,9 +11,32 @@ interface ListUsersProps {
   id: string;
   name: string;
   cpf: string;
-  email: string;
-  cidade: string;
+  banco_agencia: string;
+  conta: string;
+  salario: string;
 }
+
+const bancos = [{
+  'Nome': 'Banco do Brasil',
+  'Banco': '001',
+  'Agencia': '4530',
+  'Conta': '3001-3'
+},
+{
+  'Nome': 'Banco do Bradesco',
+  'Banco': '237',
+  'Agencia': '3636',
+  'Conta': '0001-0'
+},
+{
+  'Nome': 'ITAU',
+  'Banco': '241',
+  'Agencia': '8080',
+  'Conta': '0303-9'
+},
+{
+  'Nome': 'Santander'
+}]
 
 export function ListUsers() {
   const [users, setUsers] = useState<ListUsersProps[]>([])

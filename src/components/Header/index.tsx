@@ -17,9 +17,9 @@ export function Header({ title }: IHeaderProps) {
 }
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    height: 150,
-    backgroundColor: '#5636d3',
+    // width: '100%',
+    height: 100,
+    backgroundColor: '#4DDB40',
     alignItems: 'center',
     justifyContent: 'center'
   },
